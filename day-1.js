@@ -49,5 +49,8 @@ Expected Output:
 */
 
 // 👉 Write your solution below 👇
+const lowerName = "junaid";
+console.log(`lowercase string ${lowerName}`);
 
-
+let upperName = lowerName.toUpperCase();
+console.log(`Uppercase string ${upperName}`);
