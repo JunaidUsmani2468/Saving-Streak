@@ -17,9 +17,18 @@ Expected Output:
 */
 
 // 👉 Solution below 👇
+const nums = [2, 4, 6, 8, 10];
+console.log(nums);
 
+let doubledNums = [];
 
+for (let num of nums) {
+    let doubledNum = num * 2;
 
+    doubledNums.push(doubledNum);
+}
+
+console.log(doubledNums);
 
 /* -------------------------------
 PROBLEM 2: STRING BASICS
