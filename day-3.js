@@ -31,9 +31,11 @@ PROBLEM 2: STRING FIRST CHARACTER
 ---------------------------------
 
 Given a string:
+*/
 
 const text = "chaos";
 
+/*
 TASK:
 1. Get the first character of the string
 2. Store it in a variable called `firstChar`
@@ -45,7 +47,6 @@ Expected Output:
 */
 
 // 👉 Write your solution below 👇
-const text = "chaos";
 let firstChar = text[0];
 
 console.log(firstChar);
