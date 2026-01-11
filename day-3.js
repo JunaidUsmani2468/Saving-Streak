@@ -3,9 +3,11 @@ PROBLEM 1: ARRAY SUM
 ---------------------------------
 
 Given an array of numbers:
+*/
 
 const nums = [5, 10, 15, 20];
 
+/*
 TASK:
 1. Find the sum of all numbers
 2. Store the result in a variable called `totalSum`
@@ -17,7 +19,7 @@ Expected Output:
 */
 
 // 👉 Write your solution below 👇
-const nums = [5, 10, 15, 20];
+
 let totalSum = 0;
 
 for (let num of nums) {
@@ -47,6 +49,7 @@ Expected Output:
 */
 
 // 👉 Write your solution below 👇
+
 let firstChar = text[0];
 
 console.log(firstChar);
