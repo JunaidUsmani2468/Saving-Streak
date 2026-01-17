@@ -23,7 +23,7 @@ Expected Output:
 let negativeCount = 0;
 
 for (let num of nums) {
-    if (num > 0 ) {
+    if (num < 0 ) {
         negativeCount++;
     }
 }
@@ -48,7 +48,7 @@ TASK:
 3. Log the result
 
 Expected Output:
-3
+7
 */
 
 // 👉 Write your solution below 👇
@@ -57,12 +57,13 @@ let consonantCount = 0;
 
 for (let char of text.toLowerCase()) {
     if (
-        char === 'a' ||
-        char === 'e' ||
-        char === 'i' ||
-        char === 'o' ||
-        char === 'u'
+        char !== 'a' &&
+        char !== 'e' &&
+        char !== 'i' &&
+        char !== 'o' &&
+        char !== 'u'
     ) {
+        console.log(char);
         consonantCount++;
     }
 }
