@@ -48,7 +48,7 @@ TASK:
 3. Log the result
 
 Expected Output:
-7
+3
 */
 
 // 👉 Write your solution below 👇
