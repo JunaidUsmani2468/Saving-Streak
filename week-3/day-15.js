@@ -26,8 +26,8 @@ let uniqueArr = [];
 for (let char of text) {
     let isUnique = true;
 
-    for (let i = 0; i < uniqueArr.length; i++) {
-        if (char === uniqueArr[i]) {
+    for (let uniqueChar of uniqueArr) {
+        if (char === uniqueChar) {
             isUnique = false;
             break;
         } 
