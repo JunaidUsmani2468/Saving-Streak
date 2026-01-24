@@ -23,11 +23,22 @@ Expected Output:
 // 👉 Write your solution below 👇
 
 let maxLength = 0;
+let currentLength = 0;
 
-for (let word of text.split(' ')) {
-    if (word.length > maxLength) {
-        maxLength = word.length;
+for (let i = 0; i < text.length; i++) {
+    if (text[i] !== ' ') {
+        currentLength++;
+    } else {
+        if (currentLength > maxLength) {
+            maxLength = currentLength;
+        }
+
+        currentLength = 0;
     }
+}
+
+if (currentLength > maxLength) {
+    maxLength = currentLength;
 }
 
 console.log(maxLength);
