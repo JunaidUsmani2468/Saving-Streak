@@ -54,6 +54,7 @@ if (letterCount) {
     for (length of lengths) {
         if (length === letterCount) {
             matchCount++;
+            break;
         }
     }
 }
