@@ -28,3 +28,30 @@ Valid words → area, idea, apple, use
 */
 
 // 👉 Write your solution below 👇
+
+let vowelWordCount = 0;
+
+let isVowel = char =>
+    char === 'a' ||
+    char === 'e' ||
+    char === 'i' ||
+    char === 'o' ||
+    char === 'u';
+
+for (let i = 0; i < text.length; i++) {
+    if ((i === 0 || text[i - 1] === ' ') && isVowel(text[i])) {
+
+        for (let j = i; j < text.length; j++) {
+
+            if (text[j + 1] === ' ' || j + 1 === text.length) {
+                if (isVowel(text[j])) {
+                    vowelWordCount++;
+                }
+
+                break;
+            }
+        }
+    }
+}
+
+console.log(vowelWordCount);
