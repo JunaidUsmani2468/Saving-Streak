@@ -6,7 +6,7 @@ DAY 23 PROBLEM: LONGEST INCREASING STREAK
 Given an array of numbers:
 
 */
-const nums = [2, 3, 5, 1, 4, 6, 7, 0, 2, 3, 4];
+const nums = [2, 3, 5, 1, 4, 6, 7, 0, 2, 5, 4];
 
 /*
 TASK:
@@ -30,3 +30,20 @@ Longest increasing streak is:
 */
 
 /* 👇 Write your solution below 👇 */
+
+let maxStreak = 1;
+let currentStreak = 1;
+
+for (let i = 1; i < nums.length; i++) {
+  if (nums[i] > nums[i - 1]) {
+    currentStreak++;
+  } else {
+    currentStreak = 1;
+  }
+
+  if (currentStreak > maxStreak) {
+    maxStreak = currentStreak;
+  }
+}
+
+console.log(maxStreak);
