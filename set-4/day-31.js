@@ -32,3 +32,25 @@ Words with valid lengths: code (4), grow (4), create (6), thrive (6)
 */
 
 // 👉 Write your solution below 👇
+
+let count = 0;
+let wordLength = 0;
+
+for (let i = 0; i <= text.length; i++) {
+    if (i < text.length && text[i] !== ' ') {
+        wordLength++;
+    } else {
+        if (wordLength) {
+            for (let len of lengths) {
+                if (len === wordLength) {
+                    count++;
+                    break;
+                }
+            }
+
+            wordLength = 0;
+        }
+    }
+}
+
+console.log(count);
