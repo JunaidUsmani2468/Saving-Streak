@@ -7,8 +7,8 @@ Given an array of numbers and a string:
 
 */
 
-const lengths = [3, 4, 5];
-const text = "code daily build logic with focus";
+const lengths = [4, 6];
+const text = "code learn build dream focus create grow adapt thrive";
 
 /*
 TASK:
@@ -28,8 +28,7 @@ Expected Output:
 4
 
 Explanation:
-Words with valid lengths:
-code (4), daily (5), build (5), logic (5)
+Words with valid lengths: code (4), grow (4), create (6), thrive (6)
 */
 
 // 👉 Write your solution below 👇
