@@ -1,4 +1,5 @@
 /*
+--------------------------------------------------
 DAY 32 PROBLEM: COUNT VALID SCORES (ARRAY + OBJECT)
 --------------------------------------------------
 
@@ -6,12 +7,15 @@ You are given:
 1. An array of numbers representing scores
 2. An object that defines valid score rules
 
+*/
+
 const scores = [10, 20, 15, 30, 25, 10, 40];
 const rules = {
   min: 15,
   max: 30
 };
 
+/*
 TASK:
 1. Count how many scores are VALID
 2. A score is valid if:
@@ -33,3 +37,13 @@ Valid scores are: 20, 15, 30, 25
 */
 
 // 👇 Write your solution below 👇
+
+let count = 0;
+
+for (let score of scores) {
+    if (score >= rules.min && score <= rules.max) {
+        count++;
+    }
+}
+
+console.log(count);
