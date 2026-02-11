@@ -44,8 +44,7 @@ RULES:
 - Traverse the sentence only once
 - You may use objects for tracking if needed
 
-Expected Output:
-46
+Expected Output: 48
 
 Explanation:
 Valid words:
