@@ -65,11 +65,16 @@ Check scoring carefully — one character might not exist in charScore.
 
 let totalScore = 0;
 let wordScore = 0;
-let textWord = '';
+let currentWord = '';
+
+let allowedLookup = {};
+for (let word of allowedWords) {
+    allowedLookup[word] = true;
+}
 
 for (let i = 0; i <= text.length; i++) {
     if (text[i] !== ' ' && text[i]) {
-        textWord += text[i];
+        currentWord += text[i];
 
         if (charScore[text[i]]) {
             wordScore += charScore[text[i]];
@@ -77,14 +82,11 @@ for (let i = 0; i <= text.length; i++) {
     }
     
     if (text[i] === ' ' || !text[i]) {
-        for (let word of allowedWords) {
-            if (word === textWord) {
-                totalScore += wordScore;
-                break;
-            }
+        if (allowedLookup[currentWord]) {
+            totalScore += wordScore;
         }
 
-        textWord = '';
+        currentWord = '';
         wordScore = 0;
     }
 }
