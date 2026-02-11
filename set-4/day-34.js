@@ -79,11 +79,11 @@ for (let i = 0; i <= text.length; i++) {
     if (text[i] === ' ' || !text[i]) {
         for (let word of allowedWords) {
             if (word === textWord) {
-                console.log(textWord, '& score =', wordScore);
                 totalScore += wordScore;
                 break;
             }
         }
+
         textWord = '';
         wordScore = 0;
     }
