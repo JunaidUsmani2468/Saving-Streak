@@ -67,20 +67,16 @@ let totalScore = 0;
 let wordScore = 0;
 let textWord = '';
 
-for (let i = 0; i < text.length; i++) {
-    if (text[i] !== ' ') {
-        if (textWord === '') {
-            textWord = text[i];
-            if (charScore[text[i]]) {
-                wordScore += charScore[text[i]];
-            }
-        } else {
-            textWord += text[i]
-            if (charScore[text[i]]) {
-                wordScore += charScore[text[i]];
-            }
+for (let i = 0; i <= text.length; i++) {
+    if (text[i] !== ' ' && text[i]) {
+        textWord += text[i];
+
+        if (charScore[text[i]]) {
+            wordScore += charScore[text[i]];
         }
-    } else {
+    }
+    
+    if (text[i] === ' ' || !text[i]) {
         for (let word of allowedWords) {
             if (word === textWord) {
                 console.log(textWord, '& score =', wordScore);
@@ -91,18 +87,6 @@ for (let i = 0; i < text.length; i++) {
         textWord = '';
         wordScore = 0;
     }
-}
-
-if (textWord !== '') {
-    for (let word of allowedWords) {
-        if (word === textWord) {
-            console.log(textWord, '& score =', wordScore);
-            totalScore += wordScore;
-            break;
-        }
-    }
-    textWord = '';
-    wordScore = 0;
 }
 
 console.log(totalScore);
