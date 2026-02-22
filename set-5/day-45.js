@@ -39,37 +39,25 @@ unique streak length is 6.
 
 let seen = {};
 let currentStreak = 0;
-let maxStreak = 0;
+let result = 0;
 
 for (let i = 0; i <= text.length; i++) {
-    if (text[i] && text[i] !== ' ') {
-        if (!seen[text[i]]) {
-            seen[text[i]] = true;
-            currentStreak++;
-            console.log(text[i], currentStreak);
-        } else if (seen[text[i]]) {
-
-            if (currentStreak > maxStreak) {
-                maxStreak = currentStreak;
-            }
-
-            console.log('streak restart from', text[i]);
-            currentStreak = 1;
-            seen = {};
-            seen[text[i]] = true;
-        }
+    if (text[i] && text[i] !== ' ' && !seen[text[i]]) {
+        currentStreak++;
+        seen[text[i]] = true;
     } else {
-        if (currentStreak > maxStreak) {
-            maxStreak = currentStreak;
+        if (currentStreak > result) {
+            result = currentStreak;
         }
 
         currentStreak = 0;
         seen = {};
 
-        if (text[i + 1]) {
-            console.log('streak restart from', text[i + 1]);
+        if (text[i] && text[i] !== ' ') {
+        seen[text[i]] = true;
+        currentStreak = 1;
         }
     }
 }
 
-console.log(maxStreak);
+console.log(result);
