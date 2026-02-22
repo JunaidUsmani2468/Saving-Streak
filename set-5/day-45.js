@@ -54,8 +54,8 @@ for (let i = 0; i <= text.length; i++) {
         seen = {};
 
         if (text[i] && text[i] !== ' ') {
-        seen[text[i]] = true;
-        currentStreak = 1;
+            seen[text[i]] = true;
+            currentStreak = 1;
         }
     }
 }
