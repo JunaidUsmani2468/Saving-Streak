@@ -31,7 +31,7 @@ RULES:
 Expected Output: s
 
 Explanation:
-Among consonants, the letter 'n' appears the most times
+Among consonants, the letter 's' appears the most times
 in the string "discipline builds consistency".
 */
 
