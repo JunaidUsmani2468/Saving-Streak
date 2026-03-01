@@ -19,7 +19,6 @@ const attendance = [
   "Sara",
   "Ali",
   "Ali",
-  "Junaid",
   "Ali",
   "Junaid",
   "Junaid"
