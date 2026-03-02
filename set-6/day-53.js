@@ -42,6 +42,7 @@ Explanation:
 "noon" and "level" are also balanced,
 but "deed" appears first in the sentence.
 */
+
 let word = '';
 let result = '';
 
