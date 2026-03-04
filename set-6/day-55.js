@@ -68,29 +68,27 @@ for (let word of words) {
     let stop = false;
 
     for (let stored in freq) {
-        if (word.length === stored.length && word !== stored) {
-            let allowed = true;
+        if (word === stored) continue;
+        if (word.length !== stored.length) continue;
 
-            for (let char in freq[word]) {
-                if (freq[word][char] !== freq[stored][char]) {
-                    allowed = false;
-                    break;
-                }
-            }
+        let allowed = true;
 
-            if (allowed) {
-                first = stored;
-                second = word;
-                stop = true;
+        for (let char in freq[word]) {
+            if (freq[word][char] !== freq[stored][char]) {
+                allowed = false;
                 break;
             }
         }
+
+        if (allowed) {
+            first = stored;
+            second = word;
+            stop = true;
+            break;
+        }
     }
 
-    if (stop) {
-        break;
-    }
+    if (stop) break;
 }
 
-let pair = `${first} - ${second}`;
-console.log(pair);
+console.log(first, second);
