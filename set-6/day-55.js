@@ -54,6 +54,8 @@ Both words contain the same characters:
 l, i, s, t, e, n
 */
 
+// Approach 1: brute force (O(n² * k))
+
 let freq = {};
 let first = '';
 let second = '';
@@ -93,6 +95,7 @@ for (let word of words) {
 
 console.log(first, second);
 
+// Approach 2: optimized using signature hashing (O(n * k))
 // Chat gpt Solution
 
 let seen = {};
