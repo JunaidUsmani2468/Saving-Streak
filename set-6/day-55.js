@@ -92,3 +92,35 @@ for (let word of words) {
 }
 
 console.log(first, second);
+
+// Chat gpt Solution
+
+let seen = {};
+let first_ = "";
+let second_ = "";
+
+for (let word of words) {
+
+  let freq = {};
+
+  for (let char of word) {
+    freq[char] = (freq[char] || 0) + 1;
+  }
+
+  let pattern = "";
+
+  for (let i = 97; i <= 122; i++) { // a → z
+    let char = String.fromCharCode(i);
+    pattern += (freq[char] || 0) + "#";
+  }
+
+  if (seen[pattern]) {
+    first_ = seen[pattern];
+    second_ = word;
+    break;
+  }
+
+  seen[pattern] = word;
+}
+
+console.log(first_, second_);
