@@ -61,36 +61,36 @@ let first = '';
 let second = '';
 
 for (let word of words) {
-    freq[word] = {};
+  freq[word] = {};
 
-    for (let char of word) {
-        freq[word][char] = (freq[word][char] || 0) + 1;
+  for (let char of word) {
+    freq[word][char] = (freq[word][char] || 0) + 1;
+  }
+
+  let stop = false;
+
+  for (let stored in freq) {
+    if (word === stored) continue;
+    if (word.length !== stored.length) continue;
+
+    let allowed = true;
+
+    for (let char in freq[word]) {
+      if (freq[word][char] !== freq[stored][char]) {
+        allowed = false;
+        break;
+      }
     }
 
-    let stop = false;
-
-    for (let stored in freq) {
-        if (word === stored) continue;
-        if (word.length !== stored.length) continue;
-
-        let allowed = true;
-
-        for (let char in freq[word]) {
-            if (freq[word][char] !== freq[stored][char]) {
-                allowed = false;
-                break;
-            }
-        }
-
-        if (allowed) {
-            first = stored;
-            second = word;
-            stop = true;
-            break;
-        }
+    if (allowed) {
+      first = stored;
+      second = word;
+      stop = true;
+      break;
     }
+  }
 
-    if (stop) break;
+  if (stop) break;
 }
 
 console.log(first, second);
