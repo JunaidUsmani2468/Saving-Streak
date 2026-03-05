@@ -66,4 +66,8 @@ for (let i = 0; i < words.length; i++) {
     }
 }
 
-console.log(result);
+if (result === Infinity) {
+    console.log(-1);
+} else {
+    console.log(result);
+}
