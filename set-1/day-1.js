@@ -16,7 +16,8 @@ Expected Output:
 
 */
 
-// 👉 Solution below 👇
+// Solution: Without Built-ins
+
 const nums = [2, 4, 6, 8, 10];
 console.log(nums);
 
@@ -27,6 +28,12 @@ for (let num of nums) {
 
     doubledNums.push(doubledNum);
 }
+
+console.log(doubledNums);
+
+// Solution: Using Built-ins
+
+doubledNums = nums.map(n => n * 2);
 
 console.log(doubledNums);
 
@@ -49,6 +56,7 @@ Expected Output:
 */
 
 // 👉 Write your solution below 👇
+
 const lowerName = "junaid";
 console.log(`lowercase string ${lowerName}`);
 
