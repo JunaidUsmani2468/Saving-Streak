@@ -16,6 +16,8 @@ Expected Output: 2
 */
 
 // 👉 Write your solution below 👇
+
+// Solution: Without Built-ins
 const nums = [1, 3, 5, 7, 9, 2, 4];
 let evenCount = 0;
 
@@ -25,6 +27,10 @@ for (let num of nums) {
     }
 }
 
+console.log(evenCount);
+
+// Solution: Using Built-ins
+evenCount = nums.filter(n => n % 2 === 0).length;
 console.log(evenCount);
 
 /* -------------------------------
@@ -46,11 +52,17 @@ Expected Output:
 */
 
 // 👉 Write your solution below 👇
+
+// Solution: Without Built-ins
 const word = "JavaScript";
 let wordLength = 0;
 
-for (let letter in word) {
+for (let char in word) {
     wordLength++;
 }
 
+console.log(wordLength);
+
+// Solution: Using Built-ins
+wordLength = word.length;
 console.log(wordLength);
