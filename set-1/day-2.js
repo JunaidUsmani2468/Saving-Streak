@@ -13,9 +13,8 @@ TASK:
 
 Expected Output: 2
 
+Write your solution below 👇
 */
-
-// 👉 Write your solution below 👇
 
 // Solution: Without Built-ins
 const nums = [1, 3, 5, 7, 9, 2, 4];
@@ -30,8 +29,10 @@ for (let num of nums) {
 console.log(evenCount);
 
 // Solution: Using Built-ins
-evenCount = nums.filter(n => n % 2 === 0).length;
-console.log(evenCount);
+let evenCount_ = nums.filter(n => n % 2 === 0).length;
+console.log(evenCount_);
+
+
 
 /* -------------------------------
 PROBLEM 2: STRING LENGTH
@@ -49,9 +50,8 @@ TASK:
 Expected Output:
 10
 
+Write your solution below 👇
 */
-
-// 👉 Write your solution below 👇
 
 // Solution: Without Built-ins
 const word = "JavaScript";
@@ -64,5 +64,5 @@ for (let char in word) {
 console.log(wordLength);
 
 // Solution: Using Built-ins
-wordLength = word.length;
-console.log(wordLength);
+let wordLength_ = word.length;
+console.log(wordLength_);

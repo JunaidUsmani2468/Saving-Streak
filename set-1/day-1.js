@@ -14,10 +14,10 @@ TASK:
 Expected Output:
 [4, 8, 12, 16, 20]
 
+Write your solution below 👇
 */
 
 // Solution: Without Built-ins
-
 const nums = [2, 4, 6, 8, 10];
 console.log(nums);
 
@@ -32,10 +32,10 @@ for (let num of nums) {
 console.log(doubledNums);
 
 // Solution: Using Built-ins
+let doubledNums_ = nums.map(n => n * 2);
+console.log(doubledNums_);
 
-doubledNums = nums.map(n => n * 2);
 
-console.log(doubledNums);
 
 /* -------------------------------
 PROBLEM 2: STRING BASICS
@@ -53,9 +53,8 @@ TASK:
 Expected Output:
 "JUNAID"
 
+Write your solution below 👇
 */
-
-// 👉 Write your solution below 👇
 
 const lowerName = "junaid";
 console.log(`lowercase string ${lowerName}`);

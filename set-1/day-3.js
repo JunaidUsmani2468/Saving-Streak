@@ -16,9 +16,8 @@ TASK:
 Expected Output:
 50
 
+Write your solution below 👇
 */
-
-// 👉 Write your solution below 👇
 
 // Solution: Without Built-ins
 let totalSum = 0;
@@ -30,8 +29,10 @@ for (let num of nums) {
 console.log(totalSum);
 
 // Solution: Using Built-ins
-totalSum = nums.reduce((sum, num) => sum + num, 0);
-console.log(totalSum);
+let totalSum_ = nums.reduce((sum, num) => sum + num, 0);
+console.log(totalSum_);
+
+
 
 /* -------------------------------
 PROBLEM 2: STRING FIRST CHARACTER
@@ -51,9 +52,8 @@ TASK:
 Expected Output:
 "c"
 
+Write your solution below 👇
 */
-
-// 👉 Write your solution below 👇
 
 let firstChar = text[0];
 
