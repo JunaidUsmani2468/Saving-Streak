@@ -20,12 +20,17 @@ Expected Output:
 
 // 👉 Write your solution below 👇
 
+// Solution: Without Built-ins
 let totalSum = 0;
 
 for (let num of nums) {
     totalSum = totalSum + num;
 }
 
+console.log(totalSum);
+
+// Solution: Using Built-ins
+totalSum = nums.reduce((sum, num) => sum + num, 0);
 console.log(totalSum);
 
 /* -------------------------------
