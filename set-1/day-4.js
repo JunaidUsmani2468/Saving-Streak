@@ -16,11 +16,12 @@ TASK:
 
 Expected Output:
 89
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
-let maxValue = 0;
+// Solution: Without Built-ins
+let maxValue = nums[0];
 
 for (let num of nums) {
     if (num > maxValue) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(maxValue);
+
+// Solution: Using Built-ins
+let maxValue_ = Math.max(...nums);
+console.log(maxValue_);
+
+
 
 /*
 -------------------------------
@@ -48,16 +55,9 @@ TASK:
 
 Expected Output:
 "k"
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
-let lastChar;
-
-for (let i = 0; i < word.length; i++) {
-    if (i == word.length - 1) {
-        lastChar = word[i];
-    }
-}
-
+let lastChar = word[word.length - 1];
 console.log(lastChar);
