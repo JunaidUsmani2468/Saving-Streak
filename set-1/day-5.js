@@ -16,11 +16,12 @@ TASK:
 
 Expected Output:
 2
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
-let minValue = Number.MAX_VALUE;
+// Solution: Without Built-ins
+let minValue = nums[0];
 
 for (let num of nums) {
     if (num < minValue) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(minValue);
+
+// Solution: Using Built-ins
+let minValue_ = Math.min(...nums);
+console.log(minValue_);
+
+
 
 /*
 -------------------------------
@@ -48,18 +55,19 @@ TASK:
 
 Expected Output:
 "soahc"
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
-let reversedText;
+// Solution: Without Built-ins
+let reversedText = '';
 
 for (let i = text.length - 1; i >= 0 ; i--) {
-    if (reversedText) {
-        reversedText = reversedText + text[i];
-    } else {
-        reversedText = text[i];
-    }
+    reversedText = reversedText + text[i];
 }
 
 console.log(reversedText);
+
+// Solution: Using Built-ins
+const reversedText_ = text.split("").reverse().join("");
+console.log(reversedText_);
