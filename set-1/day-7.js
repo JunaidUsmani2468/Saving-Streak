@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 3
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let positiveCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(positiveCount);
+
+// Solution: Using Built-ins
+let positiveCount_ = nums.filter(n => n > 0).length;
+console.log(positiveCount_);
+
+
 
 /*
 -------------------------------
@@ -48,11 +55,9 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
-let wordCount = 0;
-let newText = text.split(' ');
-
-console.log(newText.length);
+let wordCount = text.split(' ').length;
+console.log(wordCount);
