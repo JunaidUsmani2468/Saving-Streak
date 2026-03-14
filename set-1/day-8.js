@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 3
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let zeroCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(zeroCount);
+
+// Solution: Using Built-ins
+let zeroCount_ = nums.filter(n => !n).length;
+console.log(zeroCount_);
+
+
 
 /*
 --------------------------------
@@ -48,9 +55,9 @@ TASK:
 
 Expected Output:
 11
-*/
 
-// 👉 Write your solution below 👇
+Write your solution below 👇
+*/
 
 let charCount = text.length;
 
