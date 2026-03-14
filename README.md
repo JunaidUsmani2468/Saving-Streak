@@ -4,38 +4,28 @@ A small JavaScript practice repository created to **protect daily coding consist
 
 ### 📢 Current Update (Post-Exams Phase)
 
-Exams are finally over.
+The exam phase ended with this repository reaching **Day 57** of the streak.
 
-During the academic phase, this repository reached **Day 57** while maintaining the daily streak.
+Now instead of adding new problems, I’m **revisiting the same problems starting from Day 1** — but with a different goal.
 
-Now that the exam period has ended, I am **no longer adding new problems**.  
-Instead, I am **revisiting the same problems starting again from Day 1**.
+**Phase 2 focus:**
 
-The goal this time is different:
-
-- ⚡ Solve each problem **using JavaScript built-in methods**
-- 🧠 Improve **code clarity and modern JS usage**
+- ⚡ Solve problems using **JavaScript built-in methods**
+- 🧠 Write **cleaner and more modern JS**
 - 🛠 Practice **real GitHub workflow**
-- 🔁 Strengthen problem-solving by **re-solving existing problems**
-
-So the problems remain the same, but the **approach evolves**.
-
-This phase is about **refinement, not repetition**.
-
-## Phase 2 Goals
-
-- Practice **built-in methods** (`map`, `filter`, `reduce`, etc.)
-- Maintain the **daily coding streak**
-- Use a **proper Git workflow**:
+- 🔁 Reinforce fundamentals by **re-solving existing problems**
 
 ```
 Issue → Branch → Solve → Commit → Pull Request → Merge
 ```
 
-This repository is now both:
+So the problems stay the same, but the **approach evolves**.
 
+This repository is now both:
 - a **JavaScript practice log**
-- a **Git/GitHub workflow training ground**
+- a **Git/GitHub workflow playground**
+
+> *Consistency first. Optimization later.*
 
 ---
 
