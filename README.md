@@ -1,5 +1,44 @@
 # Saving the Streak 🔥
 
+### 📢 Current Update (Post-Exams Phase)
+
+Exams are finally over.
+
+During the academic phase, this repository reached **Day 57** while maintaining the daily streak.
+
+Now that the exam period has ended, I am **no longer adding new problems**.  
+Instead, I am **revisiting the same problems starting again from Day 1**.
+
+The goal this time is different:
+
+- ⚡ Solve each problem **using JavaScript built-in methods**
+- 🧠 Improve **code clarity and modern JS usage**
+- 🛠 Practice **real GitHub workflow**
+- 🔁 Strengthen problem-solving by **re-solving existing problems**
+
+So the problems remain the same, but the **approach evolves**.
+
+This phase is about **refinement, not repetition**.
+
+## Phase 2 Goals
+
+- Practice **built-in methods** (`map`, `filter`, `reduce`, etc.)
+- Maintain the **daily coding streak**
+- Use a **proper Git workflow**:
+
+```
+Issue → Branch → Solve → Commit → Pull Request → Merge
+```
+
+This repository is now both:
+
+- a **JavaScript practice log**
+- a **Git/GitHub workflow training ground**
+
+---
+
+# Original Purpose of the Repository 🎓
+
 This repository exists for **one simple reason**:  
 to protect my daily coding consistency during a **chaotic academic phase**.
 
