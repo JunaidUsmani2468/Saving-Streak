@@ -8,7 +8,7 @@ The exam phase ended with this repository reaching **Day 57** of the streak.
 
 Now instead of adding new problems, I’m **revisiting the same problems starting from Day 1** — but with a different goal.
 
-**Phase 2 focus:**
+#### Phase 2 focus:
 
 - ⚡ Solve problems using **JavaScript built-in methods**
 - 🧠 Write **cleaner and more modern JS**
@@ -19,13 +19,19 @@ Now instead of adding new problems, I’m **revisiting the same problems startin
 Issue → Branch → Solve → Commit → Pull Request → Merge
 ```
 
+#### Each file now contains **two solutions**:
+
+- the **original solution (without built-ins)** from the exam phase
+- a **new solution using built-in methods**
+
 So the problems stay the same, but the **approach evolves**.
 
 This repository is now both:
+
 - a **JavaScript practice log**
 - a **Git/GitHub workflow playground**
 
-> *Consistency first. Optimization later.*
+> **⭐ Consistency first. Optimization later.**
 
 ---
 
