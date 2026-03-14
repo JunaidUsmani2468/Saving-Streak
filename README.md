@@ -1,5 +1,7 @@
 # Saving the Streak 🔥
 
+A small JavaScript practice repository created to **protect daily coding consistency during exams** and now used to **refine solutions with built-in methods and GitHub workflow practice**.
+
 ### 📢 Current Update (Post-Exams Phase)
 
 Exams are finally over.
