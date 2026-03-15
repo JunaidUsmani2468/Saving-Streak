@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 3
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let negativeCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(negativeCount);
+
+// Solution: Using Built-ins
+let negativeCount_ = nums.filter(n => n < 0).length;
+console.log(negativeCount_);
+
+
 
 /*
 -------------------------------
@@ -49,10 +56,11 @@ TASK:
 
 Expected Output:
 7
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let consonantCount = 0;
 
 for (let char of text.toLowerCase()) {
@@ -63,9 +71,12 @@ for (let char of text.toLowerCase()) {
         char !== 'o' &&
         char !== 'u'
     ) {
-        console.log(char);
         consonantCount++;
     }
 }
 
 console.log(consonantCount);
+
+// Solution: Using Built-ins
+let consonantCount_ = text.match(/[^aeiou]/gi).length;
+console.log(consonantCount_);
