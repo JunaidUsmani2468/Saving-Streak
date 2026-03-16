@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let evenCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(evenCount);
+
+// Solution: Using Built-ins
+let evenCount_ = nums.filter(n => n % 2 === 0).length;
+console.log(evenCount_);
+
+
 
 /*
 -----------------------------
@@ -48,22 +55,21 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
-let alphabets = [...Array(26)].map((_, i) => String.fromCharCode(i + 65));
+// Solution: Without Built-ins
 let upperCount = 0;
 
 for (let char of text) {
-    
-    for (let alphabet of alphabets) {
-        if (char === alphabet) {
-            upperCount++;
-            break;
-        }
+    if (char >= 'A' && char <= 'Z') {
+        upperCount++;
     }
-
 }
 
 console.log(upperCount);
+
+// Solution: Using Built-ins
+let upperCount_ = text.match(/[A-Z]/g)?.length || 0;
+console.log(upperCount_);
