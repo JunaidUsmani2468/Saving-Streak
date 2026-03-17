@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 3
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let greaterCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(greaterCount);
+
+// Solution: Using Built-ins
+const greaterCount_ = nums.filter(n => n > 10).length;
+console.log(greaterCount_);
+
+
 
 /*
 -------------------------------
@@ -48,10 +55,11 @@ TASK:
 
 Expected Output:
 2
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let spaceCount = 0;
 
 for (let char of text) {
@@ -61,3 +69,7 @@ for (let char of text) {
 }
 
 console.log(spaceCount);
+
+// Solution: Using Built-ins
+const spaceCount_ = text.match(/ /g)?.length || 0;
+console.log(spaceCount_);
