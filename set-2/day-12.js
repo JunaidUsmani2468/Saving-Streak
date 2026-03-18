@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let multipleCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(multipleCount);
+
+// Solution: Using Built-ins
+const multipleCount_ = nums.filter(n => n % 5 === 0).length;
+console.log(multipleCount_);
+
+
 
 /*
 --------------------------------
@@ -48,16 +55,21 @@ TASK:
 
 Expected Output:
 11
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let lowerCount = 0;
 
 for (let char of text) {
-    if (char === char.toLowerCase() && char !== char.toUpperCase()) {
+    if (char >= 'a' && char <= 'z') {
         lowerCount++;
     }
 }
 
 console.log(lowerCount);
+
+// Solution: Using Built-ins
+const lowerCount_ = text.replace(/[^a-z]/g, '').length;
+console.log(lowerCount_);
