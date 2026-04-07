@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let divisibleByThreeCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,10 @@ for (let num of nums) {
 }
 
 console.log(divisibleByThreeCount);
+
+// Solution: Using Built-ins
+const divisibleByThreeCount_ = nums.filter(n => n % 3 === 0).length;
+console.log(divisibleByThreeCount_);
 
 /*
 --------------------------------
@@ -48,16 +53,22 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let digitCount = 0;
 
 for (let char of text) {
-    if (Number(char) || Number(char) === 0) {
+    if (char >= '0' && char <= '9') {
         digitCount++;
     }
 }
 
+
 console.log(digitCount);
+
+// Solution: Using Built-ins
+const digitCount_ = text.match(/\d/g)?.length || 0;
+console.log(digitCount_);
