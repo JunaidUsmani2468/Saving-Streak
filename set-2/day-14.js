@@ -16,10 +16,11 @@ TASK:
 
 Expected Output:
 4
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let oddCount = 0;
 
 for (let num of nums) {
@@ -29,6 +30,12 @@ for (let num of nums) {
 }
 
 console.log(oddCount);
+
+// Solution: Using Built-ins
+const oddCount$ = nums.filter(n => n % 2).length;
+console.log(oddCount$);
+
+
 
 /*
 --------------------------------
@@ -48,22 +55,32 @@ TASK:
 
 Expected Output:
 5
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
-
+// Solution: Without Built-ins
 let vowelCount = 0;
 
-for (let char of text.toLowerCase()) {
+for (let char of text) {
     if (
         char === 'a' ||
         char === 'e' ||
         char === 'i' ||
         char === 'o' ||
-        char === 'u'
+        char === 'u' ||
+        char === 'A' ||
+        char === 'E' ||
+        char === 'I' ||
+        char === 'O' ||
+        char === 'U'
     ) {
         vowelCount++;
     }
 }
 
 console.log(vowelCount);
+
+// Solution: Using Built-ins
+const vowelCount$ = text.replace(/[^aeiou]/gi, '').length;
+console.log(vowelCount$);
