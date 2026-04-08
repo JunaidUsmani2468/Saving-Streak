@@ -35,6 +35,8 @@ console.log(divisibleByThreeCount);
 const divisibleByThreeCount_ = nums.filter(n => n % 3 === 0).length;
 console.log(divisibleByThreeCount_);
 
+
+
 /*
 --------------------------------
 PROBLEM 2: STRING DIGIT COUNT
