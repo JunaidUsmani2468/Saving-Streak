@@ -17,9 +17,13 @@ TASK:
 
 Expected Output: 7
 (Explanation: d, e, v, l, o, p, r → but 'e' repeats)
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let uniqueArr = [];
 
@@ -38,4 +42,13 @@ for (let char of text) {
     }
 }
 
-console.log(uniqueArr.length);
+const uniqueCount = uniqueArr.length;
+
+console.log(uniqueCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const uniqueCount$ = new Set(text).size;
+console.log(uniqueCount$);
