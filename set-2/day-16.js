@@ -18,9 +18,13 @@ TASK:
 Expected Output:
 8
 (Explanation: "excuses")
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let maxLength = 0;
 let currentLength = 0;
@@ -42,3 +46,10 @@ if (currentLength > maxLength) {
 }
 
 console.log(maxLength);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const maxLength$ = Math.max(...text.split(' ').map(str => str.length));
+console.log(maxLength$);
