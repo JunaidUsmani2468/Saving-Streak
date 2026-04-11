@@ -22,9 +22,13 @@ Expected Output:
 Explanation:
 Words → code(4), daily(5), build(5), habits(6), now(3)
 Words with length > 4 → daily, build, habits → 3
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let longWordCount = 0;
 let letterCount = 0;
@@ -35,14 +39,19 @@ for (let char of text) {
     } else {
         if (letterCount > 4) {
             longWordCount++;
-            letterCount = 0;
         }
+
+        letterCount = 0;
     }
 }
 
-if (letterCount > 4) {
-    longWordCount++;
-    letterCount = 0;
-}
+if (letterCount > 4) longWordCount++;
 
 console.log(longWordCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const longWordCount$ = text.split(' ').filter(word => word.length > 4).length;
+console.log(longWordCount$);
