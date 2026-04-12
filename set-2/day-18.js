@@ -19,9 +19,13 @@ Expected Output: 7
 
 Explanation:
 Words starting with vowels → exam, enjoyable, exam, anxiety, is, always, annoying
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let vowelWordCount = 0;
 
@@ -41,3 +45,10 @@ for (let i = 0; i < text.length; i++) {
 }
 
 console.log(vowelWordCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const vowelWordCount$ = text.split(' ').filter(word => /^[aeiou]/.test(word)).length;
+console.log(vowelWordCount$);
