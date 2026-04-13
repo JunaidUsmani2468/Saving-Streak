@@ -17,13 +17,17 @@ TASK:
 5. Log the result
 
 Expected Output: 16
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let consonantCount = 0;
 
-for (char of text.toLowerCase()) {
+for (char of text) {
     if (
         char !== 'a' &&
         char !== 'e' &&
@@ -37,3 +41,10 @@ for (char of text.toLowerCase()) {
 }
 
 console.log(consonantCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const consonantCount$ = text.replace(/[aeiou ]/g, '').length;
+console.log(consonantCount$);
