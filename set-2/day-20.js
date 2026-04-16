@@ -36,9 +36,7 @@ Solution: Without Built-ins  /
 let peakCount = 0;
 
 for (let i = 1; i < nums.length - 1; i++) {
-    if (nums[i - 1] < nums[i] && nums[i] > nums[i + 1]) {
-        peakCount++;
-    }
+    peakCount += nums[i - 1] < nums[i] && nums[i] > nums[i + 1];
 }
 
 console.log(peakCount);
@@ -48,25 +46,17 @@ Solution: With Built-ins  $  /
 ---------------------------*/
 
 // With Filter:
-const peakCount$ = nums.filter((num, idx, arr) =>
-    idx > 0 &&
-    idx < arr.length - 1 &&
-    num > arr[idx - 1] &&
-    num > arr[idx + 1]
+const peakCount$ = nums.filter(
+    (num, idx, arr) => num > arr[idx - 1] && num > arr[idx + 1]
 ).length;
+
 console.log(peakCount$);
 
 // With Reduce:
-const peakCount$$ = nums.reduce((count, num, idx, arr) => {
-    if (
-        idx > 0 &&
-        idx < arr.length - 1 &&
-        num > arr[idx - 1] &&
-        num > arr[idx + 1]
-    ) {
-        count++;
-    }
+const peakCount$$ = nums.reduce(
+    (count, num, idx, arr) =>
+        count + (num > arr[idx - 1] && num > arr[idx + 1]),
+    0
+);
 
-    return count;
-}, 0);
 console.log(peakCount$$);
