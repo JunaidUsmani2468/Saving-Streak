@@ -25,9 +25,13 @@ Expected Output: 3
 
 Explanation:
 Peaks are 7 (greater than 3 and 1), 9 (greater than 1 and 5) and 8 (greater than 5 and 2)
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let peakCount = 0;
 
@@ -38,3 +42,31 @@ for (let i = 1; i < nums.length - 1; i++) {
 }
 
 console.log(peakCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+// With Filter:
+const peakCount$ = nums.filter((num, idx, arr) =>
+    idx > 0 &&
+    idx < arr.length - 1 &&
+    num > arr[idx - 1] &&
+    num > arr[idx + 1]
+).length;
+console.log(peakCount$);
+
+// With Reduce:
+const peakCount$$ = nums.reduce((count, num, idx, arr) => {
+    if (
+        idx > 0 &&
+        idx < arr.length - 1 &&
+        num > arr[idx - 1] &&
+        num > arr[idx + 1]
+    ) {
+        count++;
+    }
+
+    return count;
+}, 0);
+console.log(peakCount$$);
