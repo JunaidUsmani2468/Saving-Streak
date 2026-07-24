@@ -28,35 +28,55 @@ Expected Output:
 Explanation:
 Words with matching lengths:
 code (4), builds (6), very (4), strong (6), habits (6)
+
+👉 Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let matchCount = 0;
 let letterCount = 0;
 
-for (char of text) {
-    if (char !== ' ') {
-        letterCount++;
-    } else {
-        for (length of lengths) {
-            if (length === letterCount) {
-                matchCount++;
-                break;
-            }
-        }
-
-        letterCount = 0;
+for (const char of text) {
+  if (char !== " ") {
+    letterCount++;
+  } else {
+    for (const length of lengths) {
+      if (length === letterCount) {
+        matchCount++;
+        break;
+      }
     }
+
+    letterCount = 0;
+  }
 }
 
 if (letterCount) {
-    for (length of lengths) {
-        if (length === letterCount) {
-            matchCount++;
-            break;
-        }
+  for (const length of lengths) {
+    if (length === letterCount) {
+      matchCount++;
+      break;
     }
+  }
 }
 
 console.log(matchCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+// With Filter:
+const matchCount$ = text
+  .split(" ")
+  .filter((word) => lengths.includes(word.length)).length;
+console.log(matchCount$);
+
+// With Reduce:
+const matchCount$$ = text
+  .split(" ")
+  .reduce((count, word) => count + lengths.includes(word.length), 0);
+console.log(matchCount$$);
