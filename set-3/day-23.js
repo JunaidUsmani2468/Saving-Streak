@@ -27,9 +27,13 @@ Expected Output:
 Explanation:
 Longest increasing streak is:
 [1, 4, 6, 7] → length = 4
+
+Write your solution below 👇
 */
 
-/* 👇 Write your solution below 👇 */
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let maxStreak = 1;
 let currentStreak = 1;
@@ -47,3 +51,25 @@ for (let i = 1; i < nums.length; i++) {
 }
 
 console.log(maxStreak);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const maxStreak$ = nums.reduce(
+  (state, num, idx) => {
+    if (idx > 0 && num > nums[idx - 1]) {
+      state.currentStreak++;
+    } else {
+      state.currentStreak = 1;
+    }
+
+    if (state.currentStreak > state.maxStreak) {
+      state.maxStreak = state.currentStreak;
+    }
+
+    return state;
+  },
+  { currentStreak: 1, maxStreak: 1 },
+).maxStreak;
+console.log(maxStreak$);
