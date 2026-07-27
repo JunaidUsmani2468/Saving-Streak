@@ -24,29 +24,27 @@ RULES:
 4. Handle overlapping subarrays correctly
 
 Expected Output:
-4
+5
 
 Explanation:
 Subarrays with sum = 3 are:
-[1,2], [3], [1,1,1], [3]
+[1,2], [3], [1,1,1], [1,2], [3]
 
+Write your solution below 👇
 */
-
-// 👇 Write your solution below 👇
 
 let count = 0;
 
 for (let i = 0; i < nums.length; i++) {
+  let sum = 0;
 
-    if (nums[i] === target) {
-        count++;
-    } else if (nums[i] + nums[i + 1] === target) {
-        count++;
-        i += 1;
-    } else if (nums[i] + nums[i + 1] + nums[i + 2] === target) {
-        count++
-        i += 2;
+  for (let j = i; j < nums.length; j++) {
+    sum += nums[j];
+
+    if (sum === target) {
+      count++;
     }
+  }
 }
 
 console.log(count);
