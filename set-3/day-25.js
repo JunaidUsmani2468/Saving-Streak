@@ -7,7 +7,7 @@ Given a string and an array of forbidden starting letters:
 */
 
 const text = "code builds logic through daily effort";
-const forbidden = ['b', 'd'];
+const forbidden = ["b", "d"];
 
 /*
 TASK:
@@ -28,27 +28,40 @@ Expected Output:
 Explanation:
 Valid words are:
 code, logic, through, effort
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let validCount = 0;
 
 for (let i = 0; i < text.length; i++) {
-    if (i === 0 || text[i - 1] === ' ') {
-        let isValidWord = true;
+  if (i === 0 || text[i - 1] === " ") {
+    let isValidWord = true;
 
-        for (let char of forbidden) {
-            if (char === text[i]) {
-                isValidWord = false;
-                break;
-            }
-        }
-
-        if (isValidWord) {
-            validCount++;
-        }
+    for (let char of forbidden) {
+      if (char === text[i]) {
+        isValidWord = false;
+        break;
+      }
     }
+
+    if (isValidWord) {
+      validCount++;
+    }
+  }
 }
 
 console.log(validCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const validCount$ = text
+  .split(" ")
+  .filter((word) => !forbidden.includes(word[0])).length;
+console.log(validCount$);
