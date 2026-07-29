@@ -27,25 +27,23 @@ Expected Output:
 Explanation:
 The longest streak is:
 [3, 3, 3, 3] → length = 4
-*/
 
-// 👇 Write your solution below 👇
+Write your solution below 👇
+*/
 
 let maxStreak = 1;
 let currentStreak = 1;
 
 for (let i = 1; i < nums.length; i++) {
-    if (nums[i] === nums[i - 1]) {
-        currentStreak++;
+  if (nums[i] === nums[i - 1]) {
+    currentStreak++;
+  } else {
+    currentStreak = 1;
+  }
 
-    } else {
-        
-        if (currentStreak > maxStreak) {
-            maxStreak = currentStreak;
-        }
-
-        currentStreak = 1;
-    }
+  if (currentStreak > maxStreak) {
+    maxStreak = currentStreak;
+  }
 }
 
 console.log(maxStreak);
