@@ -27,23 +27,23 @@ Explanation:
 Longest decreasing streak is:
 [5, 4, 3, 2] → length = 4
 (equal values like 5,5 break the streak)
-*/
 
-// 👉 Write your solution below 👇
+Write your solution below 👇
+*/
 
 let maxStreak = 1;
 let currentStreak = 1;
 
 for (let i = 1; i < nums.length; i++) {
-    if (nums[i] < nums[i - 1]) {
-        currentStreak++;
-    } else {
-        currentStreak = 1;
-    }
+  if (nums[i] < nums[i - 1]) {
+    currentStreak++;
+  } else {
+    currentStreak = 1;
+  }
 
-    if (currentStreak > maxStreak) {
-        maxStreak = currentStreak;
-    }
+  if (currentStreak > maxStreak) {
+    maxStreak = currentStreak;
+  }
 }
 
 console.log(maxStreak);

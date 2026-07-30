@@ -4,7 +4,6 @@ DAY 27 PROBLEM: COUNT STABLE PAIRS
 ----------------------------------
 
 Given an array of numbers:
-
 */
 
 const nums = [4, 4, 2, 2, 2, 5, 5, 1, 1, 1, 1];
@@ -25,11 +24,10 @@ RULES:
 Expected Output: 5
 
 Explanation:
-Pairs are:
-[4,4], [2,2], [5,5], [1,1], [1,1]
-*/
+Pairs are: [4,4], [2,2], [5,5], [1,1], [1,1]
 
-// 👇 Write your solution below 👇
+Write your solution below 👇
+*/
 
 let pairCount = 0;
 

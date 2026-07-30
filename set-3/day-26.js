@@ -4,7 +4,6 @@ DAY 26 PROBLEM: LONGEST SAME-NUMBER STREAK
 ----------------------------------
 
 Given an array of numbers:
-
 */
 
 const nums = [2, 2, 2, 1, 1, 3, 3, 3, 3, 2, 2];
@@ -21,8 +20,7 @@ RULES:
 2. Use only loops and conditions
 3. Handle resets correctly
 
-Expected Output:
-4
+Expected Output: 4
 
 Explanation:
 The longest streak is:
