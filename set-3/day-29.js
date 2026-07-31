@@ -21,22 +21,42 @@ RULES:
 2. Use only loops and conditions
 3. Compare only immediate neighbors
 
-Expected Output:
-3
+Expected Output: 3
 
 Explanation:
-Peaks are:
-3 (index 1), 4 (index 3), 5 (index 5)
+Peaks are: 3 (index 1), 4 (index 3), 5 (index 5)
+
+Write your solution below 👇
 */
 
-// 👉 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let peakCount = 0;
 
 for (let i = 1; i < nums.length - 1; i++) {
-    if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) {
-        peakCount++;
-    }
+  if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) {
+    peakCount++;
+  }
 }
 
 console.log(peakCount);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+// With Filter:
+const peakCount$ = nums.filter(
+  (num, idx, nums) => num > nums[idx - 1] && num > nums[idx + 1],
+).length;
+console.log(peakCount$);
+
+// With Reduce:
+const peakCount$$ = nums.reduce(
+  (count, num, idx, nums) =>
+    count + (num > nums[idx - 1] && num > nums[idx + 1]),
+  0,
+);
+console.log(peakCount$$);
