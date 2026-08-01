@@ -27,20 +27,32 @@ Expected Output:
   3: 2,
   4: 1
 }
+
+Write your solution below 👇
 */
 
-// 👇 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let freq = {};
 
 for (let num of nums) {
-
-    if (freq[num]) {
-        freq[num] += 1;
-    } else {
-        freq[num] = 1;
-    }
-
+  if (freq[num]) {
+    freq[num] += 1;
+  } else {
+    freq[num] = 1;
+  }
 }
 
 console.log(freq);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+const freq$ = nums.reduce((freq, num) => {
+  freq[num] ? (freq[num] += 1) : (freq[num] = 1);
+  return freq;
+}, {});
+console.log(freq$);
