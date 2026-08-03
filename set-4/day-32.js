@@ -6,13 +6,12 @@ DAY 32 PROBLEM: COUNT VALID SCORES (ARRAY + OBJECT)
 You are given:
 1. An array of numbers representing scores
 2. An object that defines valid score rules
-
 */
 
 const scores = [10, 20, 15, 30, 25, 10, 40];
 const rules = {
   min: 15,
-  max: 30
+  max: 30,
 };
 
 /*
@@ -29,21 +28,41 @@ RULES:
 - Use only loops and conditions
 - Traverse the array only once
 
-Expected Output:
-4
+Expected Output: 4
 
 Explanation:
 Valid scores are: 20, 15, 30, 25
+
+Write your solution below 👇
 */
 
-// 👇 Write your solution below 👇
+/*----------------------------/
+Solution: Without Built-ins  /
+---------------------------*/
 
 let count = 0;
 
 for (let score of scores) {
-    if (score >= rules.min && score <= rules.max) {
-        count++;
-    }
+  if (score >= rules.min && score <= rules.max) {
+    count++;
+  }
 }
 
 console.log(count);
+
+/*----------------------------/
+Solution: With Built-ins  $  /
+---------------------------*/
+
+// With Filter:
+const count$ = scores.filter(
+  (num) => num >= rules.min && num <= rules.max,
+).length;
+console.log(count$);
+
+// With Reduce:
+const count$$ = scores.reduce(
+  (count, num) => count + (num >= rules.min && num <= rules.max),
+  0,
+);
+console.log(count$$);
