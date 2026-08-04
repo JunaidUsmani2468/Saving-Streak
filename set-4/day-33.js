@@ -4,14 +4,13 @@ DAY 33 PROBLEM: STRING + OBJECT
 ----------------------------------
 
 Given a string and an object:
-
 */
 
 const text = "success starts with small steps";
 const limits = {
   s: 5,
   t: 3,
-  a: 1
+  a: 1,
 };
 
 /*
@@ -37,24 +36,24 @@ s, s, s, s, s   → 5 times
 t, t, t         → 3 times
 a               → 1 time
 Total = 9
-*/
 
-// 👉 Write your solution below 👇
+Write your solution below 👇
+*/
 
 let count = 0;
 let used = {};
 
 for (let char of text) {
-    if (!limits[char]) continue;
+  if (!limits[char]) continue;
 
-    if (!used[char]) {
-        used[char] = 0;
-    }
-    
-    if (used[char] < limits[char]) {
-        used[char]++;
-        count++;
-    }
+  if (!used[char]) {
+    used[char] = 0;
+  }
+
+  if (used[char] < limits[char]) {
+    used[char]++;
+    count++;
+  }
 }
 
 console.log(count);
